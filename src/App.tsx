@@ -60,13 +60,30 @@ company = 'Amazon';
 let memory: 256 | 512;
 memory = 256;
 
-// typeof
+// typeof(JSONの取得時などで使用することが多い)
 let msg: string = 'Hi';
 let msg2: typeof msg;
 msg2 = 'hello';
 
 let animal = { cat: 'small cat' };
 let newAnimal: typeof animal = { cat: 'big cat' };
+
+//keyof
+type KEYS = {
+  primary: string;
+  secondary: string;
+};
+let key: keyof KEYS;
+key = 'primary';
+
+//typeof + keyof
+const SPORTS = {
+  soccer: 'Soccer',
+  baseball: 'Baseball',
+}
+
+let keySports: keyof typeof SPORTS;
+keySports = 'soccer';
 
 function App() {
   return (
