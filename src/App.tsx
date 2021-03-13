@@ -20,10 +20,12 @@ interface NAME {
 }
 
 let nameObj: NAME = { first: 'Yamada', last: null };
+
 const func1 = (x: number, y: number): number => {
   return x + y;
 };
 
+// Intersection Types
 type PROFILE = {
   age: number;
   city: string;
@@ -51,6 +53,7 @@ value = 10;
 let arrayUni: (number | string)[];
 arrayUni = [0, 1, 2, 'hello'];
 
+// Literal Types
 let company: 'Facebook' | 'Google' | 'Amazon';
 company = 'Amazon';
 
