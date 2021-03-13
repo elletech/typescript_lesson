@@ -96,13 +96,26 @@ interface PC {
   OSType: OS;
 }
 const PC1: PC = {
-  id:1,
+  id: 1,
   OSType: OS.Windows,
 }
 const PC2: PC = {
-  id:2,
+  id: 2,
   OSType: OS.Mac,
 }
+
+//型の互換性
+const comp1 = 'test';
+let comp2: string = comp1;
+
+let comp3: string = 'test';
+// let comp4: 'test' = comp3; エラー
+
+let funcComp1 = (x: number) => { };
+let funcComp2 = (x: string) => { };
+
+// funcComp1 = funcComp2; エラー
+// funcComp2 = funcComp1; エラー
 
 function App() {
   return (
